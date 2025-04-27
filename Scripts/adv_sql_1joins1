@@ -1,5 +1,5 @@
-SELECT e.employee_name AS employee,
-m.employee_name AS manager
+SELECT e.employeeId AS employee,
+m.employeeId AS manager
 FROM 
-employees AS e JOIN employees 
-AS m ON e.manager_id = m.employee_id;
+employee AS e JOIN employee 
+AS m ON e.managerId = m.employeeId;

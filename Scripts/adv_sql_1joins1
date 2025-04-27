@@ -1,5 +1,9 @@
 SELECT e.employeeId AS employee,
-m.employeeId AS manager
+e.firstName AS employeeFirstName,
+e.lastName AS employeeLastName,
+m.employeeId AS manager,
+m.firstName AS managerFirstName,
+m.lastName AS managerLastName
 FROM 
 employee AS e JOIN employee 
 AS m ON e.managerId = m.employeeId;

@@ -2,10 +2,11 @@ SELECT
 e.firstName,
 e.lastName,
 e.employeeId,
-s.employeeId,
-e.title
+e.startDate,
+e.title,
+s.salesId
 from employee e 
 left join sales s 
-on e.employeeId = s.employeeId
+on e.employeeId = s.salesId
 where e.title = 'Sales Associate'
-and s.employeeId is NULL;
+and s.salesId is NULL;

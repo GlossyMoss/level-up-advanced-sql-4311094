@@ -7,3 +7,16 @@ m.lastName AS managerLastName
 FROM 
 employee AS e JOIN employee 
 AS m ON e.managerId = m.employeeId;
+
+SELECT
+e.firstName,
+e.lastName,
+e.employeeId,
+e.startDate,
+e.title,
+s.salesId
+from employee e 
+left join sales s 
+on e.employeeId = s.salesId
+where e.title = 'Sales Associate'
+and s.salesId is NULL;

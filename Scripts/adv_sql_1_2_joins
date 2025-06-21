@@ -1,4 +1,4 @@
-SELECT
+/*SELECT
 e.firstName,
 e.lastName,
 e.employeeId,
@@ -10,3 +10,14 @@ left join sales s
 on e.employeeId = s.salesId
 where e.title = 'Sales Associate'
 and s.salesId is NULL;
+*/
+
+SELECT e.employeeId AS employee,
+e.firstName AS employeeFirstName,
+e.lastName AS employeeLastName,
+m.employeeId AS manager,
+m.firstName AS managerFirstName,
+m.lastName AS managerLastName
+FROM 
+employee AS e JOIN employee 
+AS m ON e.managerId = m.employeeId;
